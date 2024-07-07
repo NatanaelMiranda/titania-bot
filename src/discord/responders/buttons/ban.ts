@@ -1,7 +1,7 @@
 import { Responder, ResponderType } from "#base";
 import { hexToRgb } from "@magicyan/discord";
 import { EmbedBuilder } from "discord.js";
-import { getBanOptions } from "discord/commands/private/ban.js";
+import { getBanOptions } from "../../commands/private/ban.js";
 import {settings} from "#settings";
 import { reply } from "#functions";
 
