@@ -5,7 +5,8 @@ import {
   ApplicationCommandType,
   ButtonBuilder,
   ButtonStyle,
-  EmbedBuilder
+  EmbedBuilder,
+  GuildMember
 } from "discord.js";
 
 new Command({
@@ -18,7 +19,7 @@ new Command({
     await interaction.deferReply({ ephemeral: true });
 
     const { targetMember } = interaction;
-    const { user } = targetMember;
+    const { user } = targetMember as GuildMember;
 
     if (!user) {
       await interaction.followUp("Usuário não encontrado.");
