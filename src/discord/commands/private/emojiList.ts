@@ -32,21 +32,21 @@ new Command({
     const Group = options.getSubcommandGroup();
     const SubCommand = options.getSubcommand();
 
-    const staticEmojis: record<string, string> = {};
-    const animatedEmojis: record<string, string> = {};
+    const staticEmojis: Record<string, string> = {};
+    const animatedEmojis: Record<string, string> = {};
 
     const processEmojis = (emoji: GuildEmoji) => {
+      const emojiName = emoji.name || `unknown_emoji_${emoji.id}`;
       if (emoji.animated) {
-        animatedEmojis[emoji.name] = emoji.id;
+        animatedEmojis[emojiName] = emoji.id;
       } else {
-        staticEmojis[emoji.name] = emoji.id;
+        staticEmojis[emojiName] = emoji.id;
       }
     };
 
     switch (Group) {
       case "listar": {
         switch (SubCommand) {
-
           case "local": {
             guild.emojis.cache.forEach((emoji) => processEmojis(emoji));
 
