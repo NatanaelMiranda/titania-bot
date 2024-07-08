@@ -1,0 +1,14 @@
+#folders
+/.vscode
+/node_modules
+
+#files
+/.env.example
+/firebase.example.json
+/package.lock.json
+
+#extencion
+*.zip
+
+1.env
+1firebase.json
