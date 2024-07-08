@@ -1,0 +1,18 @@
+#folders
+/node_module
+/src
+/.vscode
+
+#files
+/.env.example
+/firebase.example.json
+/.gitignore
+/1firebase.json
+
+# Extensions
+*.zip
+*.sqlite
+*.exe
+*.db
+*.development.json
+*.md
